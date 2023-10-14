@@ -1,38 +1,120 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');:root {
+  --background: #f5f6fa;
+  --text: #9c9c9c;
+  --input-bg-color: #fff;
+  --input-text-color: #a3a3a3;
+  --button-bg-color: #7f8ff4;
+  --button-text-color: #fff;
+}
+.navbar-container {
+  background: wheat;
+  padding: 20px;
+}
+
+.navbar-container {
+  font-family: 'Mulish', sans-serif;
+}
+
+.nav-title {
+  font-size: 20px;
+}
+.home-container {
   text-align: center;
+  padding: 10%;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-container span {
+  font-size: 40px;
+  font-family: 'Inconsolata', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+input {
+  padding: 20px;
+  border-radius: 50px;
+  border: 1px solid rgb(89, 89, 89);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--button-bg-color);
+}
+
+/* helper */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 50px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+  width: 150px;
+  min-height: 50px;
+}
+
+.btn--primary {
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+
+.btn--primary:hover {
+  background: #7a8bf1; /* Replace with the darken color */
+}
+
+.btn--primary:active {
+  background: var(--button-bg-color);
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+.btn--inside {
+  margin-left: -96px;
+}
+
+/* form */
+.form__field {
+  width: 360px;
+  background: var(--input-bg-color);
+  color: var(--input-text-color);
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+.info-card  {
+  background: wheat;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  margin-top: 26px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info-card span {
+  font-size: 16px !important;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
